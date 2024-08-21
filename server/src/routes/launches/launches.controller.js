@@ -37,7 +37,7 @@ function httpAbortLaunch(req, res){
     //first check if the Launch exist
     if(!existsLaunchWithId(launchId)){
         return res.status(400).json({
-            error: 'Launch not found',
+            error: 'Launch not found',  
         });
     }
     
