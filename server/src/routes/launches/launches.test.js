@@ -7,7 +7,7 @@ describe('Test GET /launches', ()=>{
         .get('/launches')
         .expect('Content-Type', /json/)
         .expect(200);
-    })
+    });
 });
 
 describe('Test POST /launches',()=>{
