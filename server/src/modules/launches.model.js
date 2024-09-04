@@ -35,7 +35,6 @@ async function getLatestFlightNumber(){
     }
     console.log(DEFUALT_FLIGHT_NUMBER);
     return lastestFlightNumber.flightNumber;
-
 }
 
 async function getAllLaunches(){
