@@ -2,9 +2,9 @@ const http = require("http");
 const { env } = require("process");
 
 const app = require('./app');
-const {mongoConnect} = require('./services/monogo');
-const {loadPlanetsData} = require('./modules/planets.model');
-
+const { mongoConnect } = require('./services/monogo');
+const { loadPlanetsData } = require('./modules/planets.model');
+const { loadLaunchData } = require('./modules/launches.model');
 
 
 const PORT = process.env.PORT || 8000;
@@ -15,6 +15,7 @@ async function startServer(){//when using files/streams its very importend for a
     await mongoConnect();
 
     await loadPlanetsData(); //first complete reading before the server starts
+    await loadLaunchData();
 
    
     server.listen(PORT, ()=>{
