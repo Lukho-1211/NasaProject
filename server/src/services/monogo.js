@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
-
-const MONGO_URL = 'mongodb+srv://NasaForEveryOne:PasswordNasa@nodefirst.nzhuexo.mongodb.net/NasaDataBaseProject?retryWrites=true&w=majority&appName=nodefirst';
+ 
+require('dotenv').config();
+ 
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose.connection.once('open', ()=>{
     console.log('MangoDB connected...');
