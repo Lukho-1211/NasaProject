@@ -18,8 +18,7 @@ const launchesSchema = new mongoose.Schema({
         required: true,
     },
     target: {//used to also connect to the other collection/ Table
-        type: String,
-        require: true,
+        type: String
     },
     customers: [ String ],
     upcoming: {
