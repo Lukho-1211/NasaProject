@@ -10,8 +10,8 @@ const { loadLaunchData } = require('./modules/launches.model');
 const PORT = process.env.PORT || 8000;
 
 const server = http.createServer(app);
-
-async function startServer(){//when using files/streams its very importend for a file to load all its info before the server starts   
+                            //when using files/streams its very importend for 
+async function startServer(){//a file to load all its info before the server starts   
     await mongoConnect();
 
     await loadPlanetsData(); //first complete reading before the server starts

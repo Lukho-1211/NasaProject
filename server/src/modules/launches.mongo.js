@@ -16,8 +16,8 @@ const launchesSchema = new mongoose.Schema({
     rocket: {
         type: String,
         required: true,
-    },
-    target: {//used to also connect to the other collection/ Table
+    },       //used to also connect 
+    target: {//to the other collection/ Table
         type: String
     },
     customers: [ String ],

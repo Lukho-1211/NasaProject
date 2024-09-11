@@ -32,14 +32,14 @@ async function populateLaunches(){
             
             pagination: false,
             populate: [
-                {
-                    path: 'rocket',//this is how to select TABLES from an extenal database / collection
+                {                   //this is how to select TABLES from 
+                    path: 'rocket',// an extenal database / collection
                     select: {
                         name: 1
                     }
                 },
-                {
-                    path: 'payloads', //select another TABLES for another field from an extenal database / collection
+                {                   ////select another TABLES for another field
+                    path: 'payloads',//from an extenal database / collection
                     select:{
                         'customers': 1
                     }
