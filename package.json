@@ -5,10 +5,10 @@
   "scripts": {
     "install-server": "npm install --prefix server",
     "install-client": "npm install --prefix client",
-    "install": "npm install npm-run-all --save-dev",
+    "install": "npm run install-server && npm install-client",
     "server": "npm run watch --prefix server",
     "client": "npm start --prefix client",
-    "watch": "npm-run-all --parallel server client",
+    "watch": "concurrently 'npm:server' 'npm:client' ",
     "deploy": "npm run build --prefix client && npm start --prefix server",
     "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server",
     "test": "npm test --prefix server && npm test --prefix client"
